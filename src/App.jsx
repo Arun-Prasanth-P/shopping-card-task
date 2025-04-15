@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import './App.css'
+import'./App.css'
 const App=(props)=> {
 
   return (
