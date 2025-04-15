@@ -1,112 +1,32 @@
-import React, { useState } from "react";
-import Navbar from "./Components/Navbar";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Products from "./Components/Products";
+/* eslint-disable react/prop-types */
+import './App.css'
+const App=(props)=> {
 
-const App = () => {
-  // Data to be used as products
-  let [cart, setCart] = useState(0);
-  let products = [
-    {
-      name: "Fancy Product",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: "$40.00 - $80.00",
-      sale: false,
-      mrp: "",
-      discount: false,
-      ratings: false,
-      category: true,
-    },
-    {
-      name: "Special Item",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: " $18.00",
-      sale: true,
-      mrp: "$20.00",
-      discount: true,
-      ratings: true,
-    },
-    {
-      name: "Sale Item",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: " $25.00",
-      sale: true,
-      mrp: "$50.00",
-      discount: true,
-      ratings: false,
-    },
-    {
-      name: "Popular Item",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: "$40.00",
-      sale: false,
-      mrp: "",
-      discount: false,
-      ratings: true,
-    },
-    {
-      name: "Sale Item",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: " $25.00",
-      sale: true,
-      mrp: "$50.00",
-      discount: true,
-      ratings: false,
-    },
-    {
-      name: "Fancy Product",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: "$120.00 - $280.00",
-      sale: false,
-      mrp: "",
-      discount: false,
-      ratings: false,
-      category: true,
-    },
-    {
-      name: "Special Item",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: " $18.00",
-      sale: true,
-      mrp: "$20.00",
-      discount: true,
-      ratings: true,
-    },
-    {
-      name: "Special Item",
-      image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-      sellingPrice: " $40.00",
-      sale: false,
-      mrp: "",
-      discount: false,
-      ratings: true,
-    },
-  ];
   return (
     <>
-  
-      <Navbar cart={cart} setCart={setCart} />
-      <Header />
-      <section className="py-5">
-        <div className="container px-4 px-lg-5 mt-5">
-          <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            {products.map((product, index) => {
-              return (
-                <Products
-                  product={product}
-                  key={index}
-                  cart={cart}
-                  setCart={setCart}
-                />
-              );
-            })}
-          </div>
+          <div className="card card-name">
+             <div className="card-header" style={{textAlign:'center'}}>
+                <p style={{margin:10}}>{props.type}</p>
+               <h2 style={{ fontSize: 50,margin:1 }}>${props.value}/month</h2>
+             </div>
+         <div className="card-body "style={{paddingLeft:20}}>
+               <h6>✔    {props.features[0].name}</h6>
+               <h6>✔    {props.features[1].name}</h6>
+               <h6>✔    {props.features[2].name}</h6>
+               <h6>✔    {props.features[3].name}</h6>
+               {props.features[4].avaiable ? (<h6>✔     {props.features[4].name}</h6>) : (
+               <h6 className='textinto'>❌     {props.features[4].name}</h6>)}
+               {props.features[5].avaiable ? (<h6>✔     {props.features[5].name}</h6>) : (
+               <h6 className='textinto'>❌     {props.features[5].name}</h6>)}
+               {props.features[6].avaiable ? (<h6>✔     {props.features[6].name}</h6>) : (
+               <h6 className='textinto'>❌     {props.features[6].name}</h6>)}
+               {props.features[7].avaiable ? (<h6>✔     {props.features[7].name}</h6>) : (
+               <h6 className='textinto'>❌     {props.features[7].name}</h6>)}
+         </div>
+         <button type="button" style={{background:'blue',color:'white',borderRadius:120,width:300,height:50,margin:5}}>BUTTON</button>
         </div>
-      </section>
-      <Footer />
     </>
-  );
-};
+  )
+}
 
 export default App;
