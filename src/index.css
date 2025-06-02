@@ -1,3 +1,22 @@
-body{
-  background-color: blue;
+.num{
+  background-color: black;
+  color: rgb(255, 255, 255);
+  display: inline;
+  border-radius: 100%;
+  margin: 10px;
+  padding: 6px;
+}
+.black_box{
+  background-color: rgb(11, 66, 59);
+  color: white;
+  text-align: center;
+}
+.footer{
+  background-color:  rgb(11, 66, 59);
+  color: white;
+  text-align:center;
+  height: 150px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
