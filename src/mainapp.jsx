@@ -73,7 +73,7 @@ const Mainapp = () => {
                 ))}
             </div>
             <div className="alert alert-success footer">
-                <h4 className="alert-heading">Copyright @ ARUN PRASANTH 2025</h4>
+                <h4 className="alert-heading">Copyright (ARUN PRASANTH) 2025</h4>
             </div>
         </>
     )
